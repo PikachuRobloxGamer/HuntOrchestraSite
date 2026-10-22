@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Hunt Middle School Orchestra in Frisco, TX: ensembles, concert season, practice tools and the Orchestra Fundraiser 2026.">
+<link rel="icon" type="image/png" href="assets/emblem.png">
+<title>Hunt Orchestra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: engraved-score feel — a string-instrument hero you can pluck, then program-style sections on a ruled staff grid */
+:root{
+  --paper:#F3F5F9;
+  --surface:#FFFFFF;
+  --ink:#0E1A55;
+  --muted:#5B6479;
+  --rule:#D5DAE5;
+  --varnish:#2B5419;   /* logo green — accent */
+  --varnish-soft:#E7EFE1;
+  --spruce:#081C76;    /* logo navy — secondary */
+  --leaf:#A9D58C;      /* light green for use on navy bands */
+  --display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1424; --surface:#161D31; --ink:#E7EAF2; --muted:#9AA3B8; --rule:#2A3350;
+    --varnish:#9CCB7F; --varnish-soft:#1B2A1E; --spruce:#B2BEFF; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1424; --surface:#161D31; --ink:#E7EAF2; --muted:#9AA3B8; --rule:#2A3350;
+  --varnish:#9CCB7F; --varnish-soft:#1B2A1E; --spruce:#B2BEFF; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--varnish);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--varnish)}
+.lede{color:var(--muted);max-width:60ch;font-size:1.0625rem}
+
+/* Nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .logo{flex:none}
+.brand b{font-family:var(--body);font-size:1.02rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--varnish)}
+.brand span{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;line-height:1}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .9rem var(--body);padding:11px 18px;border-radius:999px;text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{padding:8px 14px;font-size:.82rem}
+@media (max-width:820px){.nav ul{display:none}}
+
+/* Hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(32px,5vw,64px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.75rem,7vw,5.4rem);letter-spacing:-.01em;margin-top:14px}
+.hero h1 em{font-style:italic;color:var(--varnish)}
+.hero .lede{margin-top:20px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.strings{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px 18px 14px;min-width:0}
+.strings canvas{display:block;width:100%;height:280px;cursor:pointer;touch-action:pan-y}
+.strings .cap{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em;margin-top:8px;flex-wrap:wrap}
+.strings .now{color:var(--varnish)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.strings canvas{height:220px}}
+
+/* Facts strip */
+.facts{border-block:1px solid var(--rule);background:var(--surface)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-block:22px;gap:16px}
+.fact b{display:block;font-family:var(--display);font-size:1.9rem;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.1}
+.fact span{font-size:.85rem;color:var(--muted)}
+@media (max-width:700px){.facts .wrap{grid-template-columns:repeat(2,1fr)}}
+
+section.block{padding-block:clamp(56px,8vw,96px)}
+.head{display:grid;gap:12px;margin-bottom:36px}
+.head h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+
+/* Ensembles */
+.ens{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.ens article{padding:22px 20px 26px;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ens article:last-child{border-right:0}
+.ens .lvl{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.08em;display:flex;justify-content:space-between}
+.ens h3{font-size:1.55rem}
+.ens p{color:var(--muted);font-size:.95rem}
+.ens .tag{margin-top:auto;font-size:.8rem;font-weight:600;color:var(--spruce)}
+.ens article.top{background:var(--varnish-soft)}
+@media (max-width:900px){.ens{grid-template-columns:repeat(2,1fr)}.ens article:nth-child(2){border-right:0}.ens article:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
+@media (max-width:520px){.ens{grid-template-columns:1fr}.ens article{border-right:0;border-bottom:1px solid var(--rule)}}
+
+/* Season — concert program */
+.season{background:var(--surface);border-block:1px solid var(--rule)}
+.program{display:grid;gap:0;border-top:1px solid var(--rule)}
+.event{display:grid;grid-template-columns:64px 150px 1fr auto;gap:20px;align-items:baseline;padding-block:22px;border-bottom:1px solid var(--rule)}
+.event .mvt{font-family:var(--display);font-style:italic;font-size:1.6rem;color:var(--varnish)}
+.event time{font-family:var(--mono);font-size:.85rem;font-variant-numeric:tabular-nums}
+.event time small{display:block;color:var(--muted);font-size:.75rem}
+.event h3{font-size:1.4rem}
+.event p{color:var(--muted);font-size:.93rem;margin-top:4px;max-width:58ch}
+.event .tempo{font-family:var(--display);font-style:italic;color:var(--muted);font-size:1rem;white-space:nowrap}
+.event.next{position:relative}
+.event.next .pill{display:inline-block;margin-left:10px;vertical-align:middle;font:600 .68rem var(--body);letter-spacing:.08em;text-transform:uppercase;background:var(--varnish);color:var(--paper);padding:3px 9px;border-radius:999px}
+.note{font-size:.8rem;color:var(--muted);margin-top:16px;font-family:var(--mono)}
+@media (max-width:760px){.event{grid-template-columns:44px 1fr;gap:6px 14px}.event .tempo{grid-column:2}.event > div{grid-column:2}.event time{grid-column:2}.event .mvt{grid-row:span 3}}
+
+/* Instruments */
+.inst{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card h3{font-size:1.5rem}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0;font-size:.85rem}
+.card dt{color:var(--muted);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.card dd{margin:0;font-variant-numeric:tabular-nums}
+.card p{color:var(--muted);font-size:.92rem}
+.card .play{align-self:flex-start;margin-top:auto}
+.card svg.size{height:84px;width:auto;color:var(--varnish)}
+@media (max-width:900px){.inst{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.inst{grid-template-columns:1fr}}
+
+/* Join steps */
+.join .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:14px;padding-block:18px;border-bottom:1px solid var(--rule);counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:1.8rem;line-height:1;color:var(--varnish)}
+.steps b{display:block;font-size:1.02rem;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:.93rem}
+@media (max-width:820px){.join .wrap{grid-template-columns:1fr}}
+
+/* Support + contact */
+.support{background:var(--ink);color:var(--paper)}
+.support .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.support h2{font-size:clamp(2rem,4.4vw,3rem)}
+.support .eyebrow{color:var(--leaf)}
+.support p{color:color-mix(in srgb,var(--paper) 75%,transparent);margin-top:14px;max-width:56ch}
+.support ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.support li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid color-mix(in srgb,var(--paper) 22%,transparent);padding-bottom:10px;font-size:.95rem}
+.support li span:last-child{font-family:var(--mono);font-size:.8rem;color:var(--leaf);white-space:nowrap}
+@media (max-width:820px){.support .wrap{grid-template-columns:1fr}}
+
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+form{display:grid;gap:14px}
+label{font-size:.82rem;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:.95rem;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:11px 12px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sent{font-size:.9rem;color:var(--spruce);font-weight:600}
+.info{display:grid;gap:18px;align-content:start}
+.info div{border-top:1px solid var(--rule);padding-top:14px}
+.info dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.info dd{margin:4px 0 0;font-size:1rem}
+@media (max-width:760px){.contact .wrap{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+/* ---------- Fundraiser promotion ---------- */
+.promo-bar{background:var(--varnish);color:var(--paper);font-size:.88rem;font-weight:500}
+.promo-bar .wrap{display:flex;align-items:center;justify-content:center;gap:10px 16px;padding-block:9px;flex-wrap:wrap;text-align:center}
+.promo-bar b{font-weight:700}
+.promo-bar a{color:var(--paper);font-weight:700;text-underline-offset:3px}
+.btn.fund{background:var(--varnish);border-color:var(--varnish);color:var(--paper)}
+.hero-promo{margin-top:26px;display:flex;align-items:center;gap:14px;padding:12px 14px 12px 12px;border:1px solid var(--varnish);border-radius:14px;background:var(--varnish-soft);text-decoration:none;max-width:480px}
+.hero-promo .cal{flex:none;width:52px;text-align:center;border-radius:8px;background:var(--surface);border:1px solid var(--rule);overflow:hidden}
+.hero-promo .cal small{display:block;background:var(--varnish);color:var(--paper);font:600 .62rem var(--body);letter-spacing:.12em;text-transform:uppercase;padding:2px 0}
+.hero-promo .cal b{display:block;font-family:var(--display);font-size:1.45rem;line-height:1.3}
+.hero-promo span{font-size:.9rem;color:var(--muted)}
+.hero-promo strong{display:block;color:var(--ink);font-size:1rem}
+.hero-promo .arr{margin-left:auto;font-size:1.2rem;color:var(--varnish)}
+.fund-sec{background:var(--varnish-soft);border-block:1px solid var(--rule)}
+.fund-sec .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,56px);align-items:start}
+.fund-sec h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.fund-sec h2 em{color:var(--varnish)}
+.fund-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px;font-family:var(--mono);font-size:.82rem}
+.fund-meta span{display:flex;gap:6px}
+.fund-meta i{font-style:normal;color:var(--muted)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px;max-width:420px}
+.countdown div{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:10px 6px;text-align:center}
+.countdown b{display:block;font-family:var(--display);font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.countdown small{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.goal{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:24px;display:grid;gap:16px;min-width:0}
+.goal .nums{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.goal .nums b{font-family:var(--display);font-size:2.2rem;font-weight:500;font-variant-numeric:tabular-nums}
+.goal .nums span{color:var(--muted);font-size:.9rem}
+.bar{height:12px;border-radius:999px;background:var(--rule);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--varnish);border-radius:inherit;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.tiers{display:grid;gap:8px}
+.tier{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:baseline;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;cursor:pointer;background:transparent;text-align:left;font:inherit;color:inherit}
+.tier[aria-pressed="true"]{border-color:var(--varnish);background:var(--varnish-soft)}
+.tier b{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tier span{font-size:.88rem;color:var(--muted)}
+.goal .ex{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.fund-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;max-width:52ch}
+.fund-list li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:.95rem}
+.fund-list li::before{content:"♪";color:var(--varnish);font-weight:700}
+@media (max-width:860px){.fund-sec .wrap{grid-template-columns:1fr}}
+.interlude{padding-block:4px}
+.interlude a{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 20px;border-radius:14px;border:1px dashed var(--varnish);text-decoration:none;background:var(--surface)}
+.interlude p{font-family:var(--display);font-style:italic;font-size:1.25rem}
+.interlude p em{color:var(--varnish)}
+.interlude span{font:600 .85rem var(--body);color:var(--varnish);white-space:nowrap}
+.event.fund-ev{background:var(--varnish-soft)}
+.card .fund-note{font-size:.8rem;color:var(--varnish);font-weight:600}
+.float-fund{position:fixed;z-index:8;right:max(16px,calc(env(safe-area-inset-right,0px) + 16px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);box-shadow:0 8px 24px color-mix(in srgb,var(--ink) 25%,transparent);transition:opacity .25s ease, transform .25s ease}
+.float-fund.away{opacity:0;transform:translateY(12px);pointer-events:none}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-flex;line-height:0}
+.logo img{width:auto;max-width:100%;display:block}
+.logo .dk{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo .lt{display:none}:root:not([data-theme="light"]) .logo .dk{display:block}}
+:root[data-theme="dark"] .logo .lt{display:none}
+:root[data-theme="dark"] .logo .dk{display:block}
+.hero-logo{margin-bottom:6px}
+.foot-logo{opacity:.95}
+.goal .logo{justify-self:center;margin-bottom:4px}
+/* ---------- Mobile menu ---------- */
+.menu-btn{display:none;background:none;border:1px solid var(--rule);border-radius:10px;padding:8px 10px;color:var(--ink);cursor:pointer;font:600 .85rem var(--body)}
+@media (max-width:820px){
+  .menu-btn{display:inline-flex}
+  .nav .wrap{flex-wrap:wrap}
+  .nav ul.open{display:grid;order:5;width:100%;gap:0;padding-block:6px 4px}
+  .nav ul.open a{display:block;padding:10px 0;border-top:1px solid var(--rule);color:var(--ink)}
+}
+/* ---------- Practice room ---------- */
+.practice{background:var(--surface);border-block:1px solid var(--rule)}
+.tools{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.tool{border:1px solid var(--rule);border-radius:16px;padding:22px;background:var(--paper);display:grid;gap:16px;align-content:start;min-width:0}
+.tool h3{font-size:1.5rem}
+.tool .sub{color:var(--muted);font-size:.9rem;margin-top:-10px}
+.metro-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bpm{font-family:var(--display);font-size:4.2rem;line-height:.9;font-variant-numeric:tabular-nums}
+.bpm small{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-left:6px}
+.tempo-name{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--varnish)}
+input[type=range]{padding:0;border:0;background:transparent;accent-color:var(--varnish)}
+.beats{display:flex;gap:10px}
+.beats i{width:18px;height:18px;border-radius:50%;border:2px solid var(--rule);transition:background .05s}
+.beats i.on{background:var(--varnish);border-color:var(--varnish)}
+.beats i.first.on{background:var(--ink);border-color:var(--ink)}
+.ctrl{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ctrl select{width:auto}
+.drone-grid{display:grid;gap:12px}
+.drone-row{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:center}
+.drone-row span{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.drone-row div{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.drone{font:500 .85rem var(--mono);padding:9px 0;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
+.drone[aria-pressed="true"]{background:var(--varnish);border-color:var(--varnish);color:var(--paper)}
+.log{grid-column:1/-1}
+.log-wrap{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
+.timer{display:grid;gap:12px;justify-items:start}
+.timer b{font-family:var(--display);font-size:3rem;font-weight:500;font-variant-numeric:tabular-nums;line-height:1}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:end;height:150px}
+.day{display:grid;grid-template-rows:1fr auto auto;height:100%;gap:4px;text-align:center}
+.day .col{display:flex;align-items:flex-end;background:var(--rule);border-radius:6px;overflow:hidden}
+.day .col i{display:block;width:100%;background:var(--spruce);border-radius:6px 6px 0 0;transition:height .4s ease}
+.day.today .col i{background:var(--varnish)}
+.day small{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.day.today small{color:var(--ink);font-weight:500}
+.goalline{font-size:.9rem;color:var(--muted)}
+.goalline b{color:var(--ink)}
+@media (max-width:860px){.tools{grid-template-columns:1fr}.log-wrap{grid-template-columns:1fr}}
+/* ---------- Toolkit ---------- */
+.kit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.check{list-style:none;margin:0;padding:0;display:grid}
+.check label{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--rule);font-weight:500;font-size:.95rem;cursor:pointer}
+.check input{width:18px;height:18px;padding:0;accent-color:var(--varnish)}
+.check input:checked + span{text-decoration:line-through;color:var(--muted)}
+.check em{font-style:normal;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.prog{font-family:var(--mono);font-size:.8rem;color:var(--varnish)}
+.rules{display:grid;gap:14px}
+.rules div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.rules dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--varnish);padding-top:3px}
+.rules dd{margin:0;font-size:.95rem}
+@media (max-width:820px){.kit{grid-template-columns:1fr}}
+/* ---------- Vocabulary ---------- */
+.vocab{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.flip{perspective:900px;border:0;padding:0;background:none;cursor:pointer;font:inherit;color:inherit;height:150px;text-align:left}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip[aria-pressed="true"] .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--rule)}
+.flip .f{background:var(--surface)}
+.flip .f b{font-family:var(--display);font-style:italic;font-size:1.7rem;font-weight:500}
+.flip .f small,.flip .b small{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.flip .b{background:var(--ink);color:var(--paper);transform:rotateY(180deg)}
+.flip .b small{color:var(--varnish)}
+.flip .b p{font-size:.92rem;line-height:1.45}
+@media (prefers-reduced-motion: reduce){.flip .in{transition:none}}
+@media (max-width:900px){.vocab{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.vocab{grid-template-columns:1fr}}
+/* ---------- Composer + listening ---------- */
+.listen-sec{background:var(--surface);border-block:1px solid var(--rule)}
+.composer{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px)}
+.spot{display:grid;gap:14px;align-content:start}
+.spot .name{font-family:var(--display);font-size:clamp(2.4rem,5vw,3.6rem);line-height:1}
+.spot .dates{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.spot p{max-width:58ch}
+.spot ul{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--muted);font-size:.95rem}
+.playlist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.playlist li{border-bottom:1px solid var(--rule)}
+.playlist a{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:baseline;padding:14px 0;text-decoration:none}
+.playlist .n{font-family:var(--display);font-style:italic;color:var(--varnish);font-size:1.2rem}
+.playlist b{display:block;font-weight:600}
+.playlist span{font-size:.85rem;color:var(--muted)}
+.playlist em{font-style:normal;font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.playlist a:hover b{color:var(--varnish)}
+@media (max-width:820px){.composer{grid-template-columns:1fr}}
+/* ---------- Schedule ---------- */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--rule)}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--display);font-size:1.15rem}
+td.t{font-family:var(--mono);font-size:.82rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ---------- Opportunities ---------- */
+.opps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.opp{padding:22px;border-top:3px solid var(--varnish);background:var(--surface);border-radius:0 0 14px 14px;display:grid;gap:10px;align-content:start}
+.opp .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.opp h3{font-size:1.4rem}
+.opp p{color:var(--muted);font-size:.93rem}
+@media (max-width:860px){.opps{grid-template-columns:1fr}}
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;display:grid;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--display);font-size:1.3rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--body);color:var(--varnish);font-size:1.4rem;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:18px;color:var(--muted);max-width:66ch}
+.faq details p a{color:var(--varnish);font-weight:600}
+footer{border-top:1px solid var(--rule);padding-block:28px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+
+<div class="promo-bar" role="region" aria-label="Fundraiser announcement">
+  <div class="wrap">
+    <span>🎻 <b>Orchestra Fundraiser 2026</b> is live</span>
+    <span>Every gift supports Hunt orchestra students</span>
+    <a href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Donate now →</a>
+  </div>
+</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hunt Orchestra home"><span class="logo "><img class="lt" src="assets/emblem.png" alt="Hunt Orchestra violin emblem" style="height:30px"><img class="dk" src="assets/emblem-dark.png" alt="" aria-hidden="true" style="height:30px"></span><div><b>Hunt Orchestra</b><span>Hunt Middle School · Frisco ISD</span></div></a>
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="navList">Menu</button>
+    <ul id="navList">
+      <li><a href="#fundraiser">Fundraiser</a></li>
+      <li><a href="#ensembles">Ensembles</a></li>
+      <li><a href="#season">Season</a></li>
+      <li><a href="#instruments">Instruments</a></li>
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#join">Join</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn small fund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Donate</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="logo hero-logo"><img class="lt" src="assets/logo.png" alt="Hunt Orchestra logo" style="height:clamp(96px,14vw,138px)"><img class="dk" src="assets/logo-dark.png" alt="" aria-hidden="true" style="height:clamp(96px,14vw,138px)"></span>
+        <p class="eyebrow">Home of the Huskies strings</p>
+        <h1>Four strings.<br><em>One sound.</em></h1>
+        <p class="lede">Violin, viola, cello and bass for students in grades 6 through 8. From the first bow hold to UIL Concert &amp; Sightreading, Hunt Orchestra is where Huskies learn to play together.</p>
+        <div class="ctas">
+          <a class="btn fund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Donate to the orchestra</a>
+          <a class="btn ghost" href="#season">See the 2026–27 season</a>
+        </div>
+        <a class="hero-promo" href="#fundraiser">
+          <div class="cal"><small>Live</small><b>♪</b></div>
+          <div><strong>Orchestra Fundraiser 2026</strong><span>Support music, instruments and performances this year</span></div>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="strings">
+        <canvas id="strings" aria-label="Four violin strings, G, D, A and E. Sweep across to see them vibrate, tap to hear a note." role="img"></canvas>
+        <div class="cap"><span>Sweep to bow · tap to pluck</span><span id="now" class="now">G3 · D4 · A4 · E5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>4</b><span>Performing ensembles</span></div>
+      <div class="fact"><b>6–8</b><span>Grades served</span></div>
+      <div class="fact"><b>5</b><span>Concerts this season</span></div>
+      <div class="fact"><b>UIL</b><span>Concert &amp; Sightreading</span></div>
+    </div>
+  </div>
+
+  <section class="block fund-sec" id="fundraiser">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Hunt Orchestra Booster Club</p>
+        <h2>Orchestra <em>Fundraiser</em> 2026</h2>
+        <p class="lede" style="margin-top:16px">Orchestra helps students grow musically, socially and academically through performing together and studying harmony, scales and rhythm. Your donation pays for the learning opportunities and fun experiences that make it possible.</p>
+        <ul class="fund-list">
+          <li>Donate online in a minute through our secure 99Pledges page</li>
+          <li>Share the page with grandparents, neighbors and coworkers</li>
+          <li>Ask your employer about matching gifts to double your donation</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a class="btn fund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Donate now</a>
+          <button class="btn ghost" type="button" id="copyLink">Copy link to share</button>
+        </div>
+        <p class="note" id="linkText" style="word-break:break-all">app.99pledges.com/fund/huntorchestra2026</p>
+      </div>
+      <div class="goal">
+        <span class="logo "><img class="lt" src="assets/logo.png" alt="Hunt Orchestra logo" style="height:88px"><img class="dk" src="assets/logo-dark.png" alt="" aria-hidden="true" style="height:88px"></span>
+        <p style="font-weight:600">What your gift can do</p>
+        <div class="tiers" id="tiers">
+          <button class="tier" type="button" aria-pressed="false"><b>$25</b><span>Rosin and strings for a beginner</span></button>
+          <button class="tier" type="button" aria-pressed="true"><b>$100</b><span>A full set of music for one ensemble</span></button>
+          <button class="tier" type="button" aria-pressed="false"><b>$250</b><span>A guest clinician for one rehearsal</span></button>
+          <button class="tier" type="button" aria-pressed="false"><b>$1,000</b><span>Helps buy a school-owned cello for students</span></button>
+        </div>
+        <a class="btn fund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener" id="donateBtn" style="justify-content:center">Give $100</a>
+        <p class="ex">You choose the amount on the donation page. Gifts above are examples of what funds can cover.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ensembles">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Ensembles</p>
+        <h2>Every player has a chair</h2>
+        <p class="lede">Students are placed by skill level through spring auditions, so each group plays music that challenges them without leaving anyone behind.</p>
+      </div>
+      <div class="ens">
+        <article class="top">
+          <div class="lvl"><span>Varsity</span><span>Gr. 7–8</span></div>
+          <h3>Philharmonic</h3>
+          <p>Our top ensemble. Advanced literature, UIL competition and Region Orchestra preparation.</p>
+          <span class="tag">By audition</span>
+        </article>
+        <article>
+          <div class="lvl"><span>Non-varsity</span><span>Gr. 7–8</span></div>
+          <h3>Symphonic</h3>
+          <p>Builds shifting, vibrato and ensemble listening on standard middle school repertoire.</p>
+          <span class="tag">By audition</span>
+        </article>
+        <article>
+          <div class="lvl"><span>Sub non-varsity</span><span>Gr. 7–8</span></div>
+          <h3>Concert</h3>
+          <p>Strengthens fundamentals, note reading and tone so players are ready to move up.</p>
+          <span class="tag">Open placement</span>
+        </article>
+        <article>
+          <div class="lvl"><span>Beginner</span><span>Gr. 6</span></div>
+          <h3>Beginning Strings</h3>
+          <p>No experience needed. Classes are split by instrument so every student gets focused teaching.</p>
+          <span class="tag">Open to all 6th graders</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap interlude"><a href="#fundraiser"><p>Every player deserves a <em>good instrument.</em> Help us buy more.</p><span>Donate to the orchestra →</span></a></div>
+
+  <section class="block season" id="season">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">2026–27 Season</p>
+        <h2>The program</h2>
+        <p class="lede">All concerts are free and open to families. Students arrive 45 minutes early in concert black.</p>
+      </div>
+      <div class="program" id="program"></div>
+      <p class="note">Dates and venues are a template. Confirm with the directors before publishing.</p>
+    </div>
+  </section>
+
+  <section class="block" id="instruments">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">For incoming 6th graders</p>
+        <h2>Find your instrument</h2>
+        <p class="lede">Directors help each student try instruments at the fitting night in spring. Tap a string to hear each instrument's lowest note.</p>
+      </div>
+      <div class="inst" id="inst"></div>
+    </div>
+  </section>
+
+  <section class="block practice" id="practice">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Practice Room</p>
+        <h2>Everything you need to practice at home</h2>
+        <p class="lede">A metronome, tuning notes for every instrument and a weekly log. Sound starts when you press a button.</p>
+      </div>
+      <div class="tools">
+        <div class="tool">
+          <h3>Metronome</h3>
+          <div class="metro-top">
+            <div class="bpm"><span id="bpmVal">96</span><small>BPM</small></div>
+            <div class="tempo-name" id="tempoName">Andante</div>
+          </div>
+          <label for="bpm" class="sr" style="position:absolute;left:-9999px">Tempo</label>
+          <input type="range" id="bpm" min="40" max="208" value="96">
+          <div class="beats" id="beats"></div>
+          <div class="ctrl">
+            <button class="btn" type="button" id="metroBtn">Start</button>
+            <button class="btn ghost" type="button" id="tapBtn">Tap tempo</button>
+            <button class="btn ghost small" type="button" data-step="-4">−4</button>
+            <button class="btn ghost small" type="button" data-step="4">+4</button>
+            <label for="meter" style="display:flex;flex-direction:row;align-items:center;gap:8px;font-weight:500">Beats
+              <select id="meter"><option>2</option><option>3</option><option selected>4</option><option>6</option></select>
+            </label>
+          </div>
+        </div>
+        <div class="tool">
+          <h3>Tuning notes</h3>
+          <p class="sub">Tap a string to hold its pitch while you tune. Tap again to stop. A = 440 Hz.</p>
+          <div class="drone-grid" id="drones"></div>
+        </div>
+        <div class="tool log">
+          <h3>This week's practice</h3>
+          <p class="sub">Directors ask for at least 120 minutes a week. Your log stays on this device.</p>
+          <div class="log-wrap">
+            <div class="timer">
+              <b id="timer">00:00</b>
+              <div class="ctrl">
+                <button class="btn" type="button" id="timerBtn">Start timer</button>
+                <button class="btn ghost small" type="button" id="add15">+15 min</button>
+                <button class="btn ghost small" type="button" id="clearLog">Reset week</button>
+              </div>
+              <p class="goalline" id="goalLine"><b>0</b> of 120 minutes this week</p>
+            </div>
+            <div class="week" id="week"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap interlude" style="padding-top:40px"><a href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener"><p>Like these tools? Help fund <em>sheet music, clinicians and instruments.</em></p><span>Donate to Orchestra Fundraiser 2026 →</span></a></div>
+
+  <section class="block" id="toolkit">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Student toolkit</p>
+        <h2>Supplies and concert day</h2>
+      </div>
+      <div class="kit">
+        <div class="tool">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><h3>Supply checklist</h3><span class="prog" id="kitProg">0 / 8</span></div>
+          <ul class="check" id="kit"></ul>
+        </div>
+        <div class="tool">
+          <h3>Concert day guide</h3>
+          <dl class="rules">
+            <div><dt>Dress</dt><dd>All black: black dress shirt or blouse, black pants or long skirt, black socks and closed-toe shoes.</dd></div>
+            <div><dt>Arrive</dt><dd>45 minutes before start time, instrument tuned and rosined, music in a black folder.</dd></div>
+            <div><dt>On stage</dt><dd>Walk on quietly, sit tall, watch the director. Instruments up and down together.</dd></div>
+            <div><dt>Audience</dt><dd>Silence phones. Clap at the end of a whole piece, not between movements. Enter and leave between pieces.</dd></div>
+            <div><dt>After</dt><dd>Stay until the last ensemble finishes. Every group deserves a full house.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="words" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Words to know</p>
+        <h2>Speak orchestra</h2>
+        <p class="lede">Terms you'll see in your music every week. Tap a card to flip it.</p>
+      </div>
+      <div class="vocab" id="vocab"></div>
+    </div>
+  </section>
+
+  <section class="block listen-sec" id="listen">
+    <div class="wrap composer">
+      <div class="spot">
+        <p class="eyebrow">Composer spotlight</p>
+        <div class="name">Antonín Dvořák</div>
+        <div class="dates">1841 – 1904 · Bohemia (today's Czech Republic)</div>
+        <p>Dvořák started out playing viola in an opera orchestra in Prague, so he knew string sections from the inside. He later moved to New York to lead a music school and wrote his famous "New World" Symphony there in 1893.</p>
+        <ul>
+          <li>He spent a summer in Spillville, Iowa, where he wrote his "American" String Quartet.</li>
+          <li>He loved trains and liked to memorize locomotive numbers.</li>
+          <li>His Serenade for Strings is a favorite for school orchestras.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Listening list</p>
+        <ol class="playlist" id="playlist"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="schedule">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Weekly schedule</p>
+        <h2>When each group meets</h2>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Ensemble</th><th>Class period</th><th>Sectionals</th><th>Extra</th></tr></thead>
+          <tbody>
+            <tr><td>Philharmonic</td><td class="t">1st period</td><td class="t">Tue &amp; Thu · 7:45 am</td><td>Region music clinics in fall</td></tr>
+            <tr><td>Symphonic</td><td class="t">3rd period</td><td class="t">Wed · 7:45 am</td><td>UIL prep in spring</td></tr>
+            <tr><td>Concert</td><td class="t">5th period</td><td class="t">Mon · 7:45 am</td><td>Chair tests each six weeks</td></tr>
+            <tr><td>Beginning Strings</td><td class="t">By instrument</td><td class="t">Optional Fri help</td><td>Playing tests on the method book</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Schedule is a template. Replace with the real periods and times.</p>
+    </div>
+  </section>
+
+  <section class="block" id="honors" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Go further</p>
+        <h2>Honors and opportunities</h2>
+      </div>
+      <div class="opps">
+        <div class="opp"><span class="when">Fall</span><h3>Region Orchestra</h3><p>Students prepare audition etudes and scales. Those who place perform with top players from across the region.</p></div>
+        <div class="opp"><span class="when">Winter</span><h3>Solo &amp; Ensemble</h3><p>Play a solo or chamber piece for a judge and earn a rating and medal. Great for building confidence.</p></div>
+        <div class="opp"><span class="when">All year</span><h3>Private lessons</h3><p>One-on-one lessons with professional teachers during or after school. Ask the directors about the lesson program.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap interlude" style="padding-bottom:40px"><a href="#fundraiser"><p>Can't rent an instrument? donations help buy <em>school-owned loaners.</em></p><span>Donate now →</span></a></div>
+
+  <section class="block join" id="join">
+    <div class="wrap">
+      <div class="head" style="margin:0">
+        <p class="eyebrow">Join</p>
+        <h2>How to sign up</h2>
+        <p class="lede">Orchestra counts as a fine arts credit and runs all year. Students can join as beginners in 6th grade or audition in at any grade.</p>
+        <div style="margin-top:12px"><a class="btn" href="#contact">Ask a director</a></div>
+      </div>
+      <ol class="steps">
+        <li><div><b>Pick Orchestra on course selection</b><span>Choose Beginning Strings on the Frisco ISD course request form in spring.</span></div></li>
+        <li><div><b>Come to instrument fitting night</b><span>Try violin, viola, cello and bass with a director. You leave with a recommendation and the right size.</span></div></li>
+        <li><div><b>Rent or borrow an instrument</b><span>Rent-to-own from a local music store, or ask about school-owned cellos and basses.</span></div></li>
+        <li><div><b>Get your supplies</b><span>Method book, rosin, shoulder rest or rock stop, and a folding stand for home practice.</span></div></li>
+        <li><div><b>Show up on day one</b><span>No experience needed. We start with posture and bow hold and play our first song within weeks.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">For parents</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>Does my child need experience to join?</summary><p>No. Beginning Strings starts from zero. Most of our players picked up an instrument for the first time in 6th grade.</p></details>
+        <details><summary>How much does orchestra cost?</summary><p>The main costs are an instrument rental, a method book and basic supplies. Ask the directors about school-owned instruments if cost is a concern. Donations to the <a href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Orchestra Fundraiser 2026</a> help keep loaners available.</p></details>
+        <details><summary>How much should my child practice?</summary><p>About 20 minutes a day, five days a week. Short daily practice beats one long session. The Practice Room above has a timer and log.</p></details>
+        <details><summary>Can my child do orchestra and athletics?</summary><p>Yes. Many students do both. Concert dates come out early in the year so families can plan around games.</p></details>
+        <details><summary>What if we move up a size mid-year?</summary><p>Students grow. Most rental programs let you trade up to the next size at no extra charge. Directors check fit each semester.</p></details>
+        <details><summary>How can I help?</summary><p>Join the Booster Club, volunteer at concerts and give to the <a href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">fundraiser</a>. Ask your employer about matching gifts to double your donation.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block support">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Orchestra Boosters</p>
+        <h2>Help keep the music going</h2>
+        <p>Parent volunteers and donations pay for sheet music, clinicians, contest fees, instrument repairs and the end-of-year banquet. Our main campaign this year is Orchestra Fundraiser 2026. Please give and share it with family and friends.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn fund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">Donate to the fundraiser</a>
+          <a class="btn ghost" href="#contact" style="color:var(--paper);border-color:var(--paper)">Become a booster</a>
+        </div>
+      </div>
+      <ul>
+        <li><span>Concert ushers &amp; setup</span><span>Each concert</span></li>
+        <li><span>Uniform fittings</span><span>September</span></li>
+        <li><span>Solo &amp; Ensemble snacks</span><span>February</span></li>
+        <li><span>UIL contest chaperones</span><span>March</span></li>
+        <li><span>Spring banquet</span><span>May</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <div>
+        <div class="head" style="margin-bottom:24px">
+          <p class="eyebrow">Contact</p>
+          <h2>Talk to the directors</h2>
+        </div>
+        <form id="form" novalidate>
+          <div class="row2">
+            <label for="name">Your name<input id="name" required autocomplete="name"></label>
+            <label for="email">Email<input id="email" type="email" required autocomplete="email"></label>
+          </div>
+          <div class="row2">
+            <label for="role">I am a
+              <select id="role"><option>Parent or guardian</option><option>Student</option><option>Incoming 6th grade family</option><option>Community member</option></select>
+            </label>
+            <label for="topic">Topic
+              <select id="topic"><option>Fundraiser</option><option>Joining orchestra</option><option>Concerts</option><option>Boosters &amp; volunteering</option><option>Instrument rental</option><option>Something else</option></select>
+            </label>
+          </div>
+          <label for="msg">Message<textarea id="msg" required></textarea></label>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <button class="btn" type="submit">Send message</button>
+            <span class="sent" id="sent" hidden></span>
+          </div>
+        </form>
+      </div>
+      <dl class="info">
+        <div><dt>Rehearsal room</dt><dd>Hunt Middle School Orchestra Hall<br>Frisco, TX 75034</dd></div>
+        <div><dt>Director</dt><dd>Head Orchestra Director (add name)</dd></div>
+        <div><dt>Associate director</dt><dd>Associate Director (add name)</dd></div>
+        <div><dt>Before &amp; after school</dt><dd>Sectionals Mon–Thu, 7:45–8:30 am<br>Private lesson program available</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="align-items:center">
+    <span class="logo foot-logo"><img class="lt" src="assets/logo.png" alt="Hunt Orchestra logo" style="height:64px"><img class="dk" src="assets/logo-dark.png" alt="" aria-hidden="true" style="height:64px"></span>
+    <span>© 2026 Hunt Middle School Orchestra · Frisco ISD</span>
+    <a href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener" style="color:var(--varnish);font-weight:600">Support Orchestra Fundraiser 2026 →</a>
+  </div>
+</footer>
+<a class="btn fund float-fund" id="floatFund" href="https://app.99pledges.com/fund/huntorchestra2026" target="_blank" rel="noopener">🎻 Donate to Hunt Orchestra</a>
+
+<script>
+(function(){
+  /* ---------- Season data ---------- */
+  var events = [
+    {m:"I",   d:"2026-10-27", time:"7:00 pm", t:"Fall Concert", p:"All four ensembles open the season. Beginners play their first public piece.", tempo:"Allegro"},
+    {m:"II",  d:"2026-12-10", time:"7:00 pm", t:"Winter Concert", p:"Holiday favorites and a side-by-side piece with the Lebanon Trail HS orchestra.", tempo:"Andante festivo"},
+    {m:"III", d:"2027-02-06", time:"All day", t:"Solo & Ensemble Contest", p:"Students perform solos and small-group pieces for a judge and earn medals.", tempo:"Con brio"},
+    {m:"IV",  d:"2027-03-25", time:"Contest", t:"UIL Concert & Sightreading", p:"Philharmonic and Symphonic perform for a panel, then read new music on the spot.", tempo:"Maestoso"},
+    {m:"V",   d:"2027-05-13", time:"7:00 pm", t:"Spring Concert & Awards", p:"Our final concert, eighth-grade farewell and awards for the year.", tempo:"Finale"}
+  ];
+  var today = new Date(2026, 9, 21), nextIdx = -1;
+  var prog = document.getElementById("program");
+  events.forEach(function(e,i){
+    var dt = new Date(e.d + "T12:00:00");
+    if (nextIdx < 0 && dt >= today) nextIdx = i;
+    var row = document.createElement("div");
+    row.className = "event" + (e.fund ? " fund-ev" : "");
+    row.innerHTML =
+      '<span class="mvt">'+e.m+'</span>'+
+      '<time datetime="'+e.d+'">'+dt.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})+
+        '<small>'+dt.toLocaleDateString("en-US",{weekday:"long"})+' · '+e.time+'</small></time>'+
+      '<div><h3>'+e.t+'</h3><p>'+e.p+'</p></div>'+
+      '<span class="tempo">'+(e.fund ? '<a class="btn fund small" href="#fundraiser">Details</a>' : e.tempo)+'</span>';
+    prog.appendChild(row);
+  });
+  if (nextIdx >= 0){
+    var r = prog.children[nextIdx]; r.classList.add("next");
+    var days = Math.round((new Date(events[nextIdx].d+"T12:00:00") - today)/864e5);
+    r.querySelector("h3").insertAdjacentHTML("beforeend",'<span class="pill">Next · '+days+' days</span>');
+  }
+
+  /* ---------- Audio (plucked string) ---------- */
+  var ctx = null;
+  function pluck(freq){
+    try{
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if (ctx.state === "suspended") ctx.resume();
+      var now = ctx.currentTime;
+      var g = ctx.createGain(), f = ctx.createBiquadFilter();
+      f.type = "lowpass"; f.frequency.setValueAtTime(freq*8, now); f.frequency.exponentialRampToValueAtTime(freq*1.5, now+0.8);
+      g.gain.setValueAtTime(0.0001, now); g.gain.exponentialRampToValueAtTime(0.35, now+0.01); g.gain.exponentialRampToValueAtTime(0.0001, now+1.6);
+      [1,2,3].forEach(function(h,k){
+        var o = ctx.createOscillator(), og = ctx.createGain();
+        o.type = k ? "sine" : "triangle"; o.frequency.value = freq*h;
+        og.gain.value = [1,.35,.15][k];
+        o.connect(og); og.connect(f); o.start(now); o.stop(now+1.7);
+      });
+      f.connect(g); g.connect(ctx.destination);
+    }catch(err){}
+  }
+
+  /* ---------- Instruments ---------- */
+  var inst = [
+    {n:"Violin", low:"G3", f:196, range:"G3 – E7", clef:"Treble", size:"1/2 – 4/4", h:40, p:"Carries the melody and sits on the shoulder. Great for students who love to play the tune."},
+    {n:"Viola", low:"C3", f:130.81, range:"C3 – E6", clef:"Alto", size:"12″ – 16″", h:50, p:"A deeper, warmer violin with its own clef. Violists are always in demand, so you get noticed."},
+    {n:"Cello", low:"C2", f:65.41, range:"C2 – A5", clef:"Bass & tenor", size:"1/2 – 4/4", h:72, p:"Played seated with an endpin. Rich and singing, it covers bass lines and big solos."},
+    {n:"Bass", low:"E1", f:41.2, range:"E1 – G4", clef:"Bass", size:"1/4 – 3/4", h:96, p:"The foundation of the orchestra. Played standing or on a stool, and it keeps everyone in time."}
+  ];
+  var ig = document.getElementById("inst");
+  inst.forEach(function(x,i){
+    var c = document.createElement("article"); c.className = "card";
+    var w = x.h*0.42, top = 96 - x.h;
+    c.innerHTML =
+      '<svg class="size" viewBox="0 0 60 100" aria-hidden="true"><line x1="0" y1="99" x2="60" y2="99" stroke="var(--rule)"/>'+
+        '<ellipse cx="30" cy="'+(top+x.h*0.72)+'" rx="'+(w/2)+'" ry="'+(x.h*0.22)+'" fill="none" stroke="currentColor" stroke-width="1.5"/>'+
+        '<ellipse cx="30" cy="'+(top+x.h*0.38)+'" rx="'+(w/2.6)+'" ry="'+(x.h*0.15)+'" fill="none" stroke="currentColor" stroke-width="1.5"/>'+
+        '<line x1="30" y1="'+top+'" x2="30" y2="'+(top+x.h*0.9)+'" stroke="currentColor" stroke-width="1.2"/></svg>'+
+      '<h3>'+x.n+'</h3><p>'+x.p+'</p>'+
+      '<dl><dt>Range</dt><dd>'+x.range+'</dd><dt>Clef</dt><dd>'+x.clef+'</dd><dt>Sizes</dt><dd>'+x.size+'</dd></dl>'+
+      (i >= 2 ? '<p class="fund-note">Donations help buy school loaner '+x.n.toLowerCase()+'s.</p>' : '')+
+      '<button class="btn ghost small play" type="button">Hear low '+x.low+'</button>';
+    c.querySelector("button").addEventListener("click", function(){ pluck(x.f); });
+    ig.appendChild(c);
+  });
+
+  /* ---------- Hero strings canvas ---------- */
+  var cv = document.getElementById("strings"), cx = cv.getContext("2d");
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var S = [
+    {name:"G", note:"G3", f:196, w:3.2},
+    {name:"D", note:"D4", f:293.66, w:2.5},
+    {name:"A", note:"A4", f:440, w:1.9},
+    {name:"E", note:"E5", f:659.25, w:1.3}
+  ].map(function(s){ s.amp = 0; s.phase = 0; s.pos = .5; return s; });
+  var W, H, dpr, colors = {};
+  function readColors(){
+    var cs = getComputedStyle(document.documentElement);
+    colors.ink = cs.getPropertyValue("--ink").trim();
+    colors.muted = cs.getPropertyValue("--muted").trim();
+    colors.rule = cs.getPropertyValue("--rule").trim();
+    colors.varnish = cs.getPropertyValue("--varnish").trim();
+  }
+  function size(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = W*dpr; cv.height = H*dpr; cx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function yOf(i){ return H*0.2 + i*(H*0.6/3); }
+  var x0 = 44, x1;
+  function draw(t){
+    x1 = W - 16;
+    cx.clearRect(0,0,W,H);
+    // nut and bridge
+    cx.strokeStyle = colors.rule; cx.lineWidth = 6;
+    cx.beginPath(); cx.moveTo(x0, H*0.1); cx.lineTo(x0, H*0.9); cx.stroke();
+    cx.beginPath(); cx.moveTo(x1-2, H*0.1); cx.lineTo(x1-2, H*0.9); cx.stroke();
+    // fingerboard position dots (1st position: low 1, 2, 3, 4)
+    cx.fillStyle = colors.rule;
+    [.11,.21,.3,.38].forEach(function(p){ var x = x0 + (x1-x0)*p; cx.beginPath(); cx.arc(x, H*0.95, 2, 0, 7); cx.fill(); });
+    S.forEach(function(s,i){
+      var y = yOf(i), len = x1 - x0;
+      s.phase += s.f/2600; s.amp *= reduce ? 0 : 0.955;
+      cx.strokeStyle = s.amp > .3 ? colors.varnish : colors.ink;
+      cx.lineWidth = s.w;
+      cx.beginPath();
+      for (var k=0;k<=60;k++){
+        var u = k/60, x = x0 + len*u;
+        var env = u < s.pos ? u/s.pos : (1-u)/(1-s.pos);
+        var dy = s.amp * Math.sin(s.phase*6.283) * (0.7*env + 0.3*Math.sin(Math.PI*u));
+        k ? cx.lineTo(x, y+dy) : cx.moveTo(x, y+dy);
+      }
+      cx.stroke();
+      cx.fillStyle = s.amp > .3 ? colors.varnish : colors.muted;
+      cx.font = "500 12px " + getComputedStyle(document.body).getPropertyValue("--mono");
+      cx.textBaseline = "middle"; cx.textAlign = "right";
+      cx.fillText(s.name, x0-12, y);
+    });
+    requestAnimationFrame(draw);
+  }
+  var last = null;
+  function hit(clientX, clientY, play){
+    var r = cv.getBoundingClientRect(), x = clientX - r.left, y = clientY - r.top;
+    var best = -1, bd = 1e9;
+    S.forEach(function(s,i){ var d = Math.abs(yOf(i)-y); if (d < bd){ bd = d; best = i; } });
+    if (best < 0 || bd > H*0.11) return;
+    var s = S[best];
+    s.pos = Math.min(.9, Math.max(.1, (x-x0)/(x1-x0)));
+    s.amp = Math.max(s.amp, play ? 12 : 7);
+    document.getElementById("now").textContent = s.name + " string · " + s.note + " · " + Math.round(s.f) + " Hz";
+    if (play) pluck(s.f);
+  }
+  cv.addEventListener("pointermove", function(e){
+    var r = cv.getBoundingClientRect(), y = e.clientY - r.top;
+    if (last !== null){
+      S.forEach(function(s,i){ var sy = yOf(i); if ((last - sy)*(y - sy) < 0) hit(e.clientX, sy + r.top, false); });
+    }
+    last = y;
+  });
+  cv.addEventListener("pointerleave", function(){ last = null; });
+  cv.addEventListener("pointerdown", function(e){ hit(e.clientX, e.clientY, true); });
+
+  readColors(); size(); requestAnimationFrame(draw);
+  window.addEventListener("resize", size);
+  try{
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", readColors);
+    new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+  }catch(err){}
+  // gentle opening strum so the hero is alive at rest
+  if (!reduce) S.forEach(function(s,i){ setTimeout(function(){ s.amp = 6; s.pos = .55; }, 400 + i*120); });
+
+  /* ---------- Fundraiser ---------- */
+  var tiers = document.querySelectorAll(".tier"), donate = document.getElementById("donateBtn");
+  tiers.forEach(function(t){ t.addEventListener("click", function(){
+    tiers.forEach(function(o){ o.setAttribute("aria-pressed", o === t ? "true" : "false"); });
+    donate.textContent = "Give " + t.querySelector("b").textContent;
+  }); });
+  var cp = document.getElementById("copyLink");
+  cp.addEventListener("click", function(){
+    var url = "https://app.99pledges.com/fund/huntorchestra2026";
+    function done(){ cp.textContent = "Link copied"; setTimeout(function(){ cp.textContent = "Copy link to share"; }, 2000); }
+    function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById("linkText")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); cp.textContent = "Press Ctrl+C to copy"; }
+    try{ navigator.clipboard.writeText(url).then(done, fallback); }catch(err){ fallback(); }
+  });
+  var ff = document.getElementById("floatFund"), fs = document.getElementById("fundraiser");
+  try{
+    new IntersectionObserver(function(en){ ff.classList.toggle("away", en[0].isIntersecting); }).observe(fs);
+  }catch(err){}
+
+
+  /* ---------- Mobile menu ---------- */
+  var mb = document.getElementById("menuBtn"), nl = document.getElementById("navList");
+  mb.addEventListener("click", function(){ var o = nl.classList.toggle("open"); mb.setAttribute("aria-expanded", o); mb.textContent = o ? "Close" : "Menu"; });
+  nl.addEventListener("click", function(e){ if (e.target.tagName === "A"){ nl.classList.remove("open"); mb.setAttribute("aria-expanded", false); mb.textContent = "Menu"; } });
+
+  function AC(){ ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); if (ctx.state === "suspended") ctx.resume(); return ctx; }
+  function store(k, v){ try{ if (v === undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k, JSON.stringify(v)); }catch(e){ return null; } }
+
+  /* ---------- Metronome ---------- */
+  var bpmEl = document.getElementById("bpm"), bpmVal = document.getElementById("bpmVal"), tn = document.getElementById("tempoName");
+  var meterEl = document.getElementById("meter"), beatsEl = document.getElementById("beats"), mBtn = document.getElementById("metroBtn");
+  var names = [[60,"Largo"],[66,"Larghetto"],[76,"Adagio"],[108,"Andante"],[120,"Moderato"],[156,"Allegro"],[176,"Vivace"],[200,"Presto"],[999,"Prestissimo"]];
+  var running = false, nextT = 0, beat = 0, timerId = null;
+  function drawBeats(){ beatsEl.innerHTML = ""; for (var i=0;i<+meterEl.value;i++){ var d = document.createElement("i"); if(!i) d.className = "first"; beatsEl.appendChild(d); } }
+  function setBpm(v){ v = Math.max(40, Math.min(208, Math.round(v))); bpmEl.value = v; bpmVal.textContent = v; for (var i=0;i<names.length;i++){ if (v < names[i][0]){ tn.textContent = names[i][1]; break; } } }
+  function click(t, accent){
+    var c = ctx, o = c.createOscillator(), g = c.createGain();
+    o.frequency.value = accent ? 1600 : 1000; g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(accent ? .5 : .3, t+.002); g.gain.exponentialRampToValueAtTime(.0001, t+.06);
+    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t+.07);
+  }
+  function sched(){
+    while (nextT < ctx.currentTime + .12){
+      var b = beat % +meterEl.value, t = nextT;
+      click(t, b === 0);
+      (function(b, delay){ setTimeout(function(){ Array.prototype.forEach.call(beatsEl.children, function(d,i){ d.classList.toggle("on", i === b); }); }, delay); })(b, Math.max(0,(t-ctx.currentTime)*1000));
+      nextT += 60/ +bpmEl.value; beat++;
+    }
+  }
+  mBtn.addEventListener("click", function(){
+    AC();
+    running = !running; mBtn.textContent = running ? "Stop" : "Start";
+    if (running){ beat = 0; nextT = ctx.currentTime + .05; timerId = setInterval(sched, 25); }
+    else { clearInterval(timerId); Array.prototype.forEach.call(beatsEl.children, function(d){ d.classList.remove("on"); }); }
+  });
+  bpmEl.addEventListener("input", function(){ setBpm(bpmEl.value); });
+  document.querySelectorAll("[data-step]").forEach(function(b){ b.addEventListener("click", function(){ setBpm(+bpmEl.value + +b.getAttribute("data-step")); }); });
+  meterEl.addEventListener("change", function(){ beat = 0; drawBeats(); });
+  var taps = [];
+  document.getElementById("tapBtn").addEventListener("click", function(){
+    var n = performance.now(); taps = taps.filter(function(t){ return n - t < 2500; }); taps.push(n);
+    if (taps.length > 1){ var avg = (taps[taps.length-1] - taps[0]) / (taps.length-1); setBpm(60000/avg); }
+  });
+  drawBeats(); setBpm(96);
+
+  /* ---------- Tuning drones ---------- */
+  var tunings = [
+    ["Violin",[["G3",196],["D4",293.66],["A4",440],["E5",659.25]]],
+    ["Viola",[["C3",130.81],["G3",196],["D4",293.66],["A4",440]]],
+    ["Cello",[["C2",65.41],["G2",98],["D3",146.83],["A3",220]]],
+    ["Bass",[["E1",41.2],["A1",55],["D2",73.42],["G2",98]]]
+  ];
+  var dg = document.getElementById("drones"), drone = null, droneBtn = null;
+  function stopDrone(){ if (!drone) return; var t = ctx.currentTime; drone.g.gain.cancelScheduledValues(t); drone.g.gain.setTargetAtTime(.0001, t, .08); var d = drone; setTimeout(function(){ d.o.forEach(function(o){ o.stop(); }); }, 400); drone = null; if (droneBtn) droneBtn.setAttribute("aria-pressed","false"); droneBtn = null; }
+  tunings.forEach(function(tu){
+    var row = document.createElement("div"); row.className = "drone-row";
+    row.innerHTML = "<span>"+tu[0]+"</span><div></div>";
+    tu[1].forEach(function(n){
+      var b = document.createElement("button"); b.type = "button"; b.className = "drone"; b.textContent = n[0]; b.setAttribute("aria-pressed","false");
+      b.addEventListener("click", function(){
+        var same = droneBtn === b; stopDrone(); if (same) return;
+        try{
+          AC(); var t = ctx.currentTime, g = ctx.createGain(), f = ctx.createBiquadFilter();
+          f.type = "lowpass"; f.frequency.value = Math.min(4000, n[1]*6);
+          var o1 = ctx.createOscillator(), o2 = ctx.createOscillator(); o1.type = "sawtooth"; o2.type = "sine";
+          o1.frequency.value = n[1]; o2.frequency.value = n[1]*2;
+          g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.16, t+.15);
+          o1.connect(f); o2.connect(f); f.connect(g); g.connect(ctx.destination); o1.start(); o2.start();
+          drone = {g:g, o:[o1,o2]}; droneBtn = b; b.setAttribute("aria-pressed","true");
+        }catch(e){}
+      });
+      row.lastChild.appendChild(b);
+    });
+    dg.appendChild(row);
+  });
+
+  /* ---------- Practice log ---------- */
+  var dayNames = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  function weekKey(){ var d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() - ((d.getDay()+6)%7)); return "hoLog-" + d.toISOString().slice(0,10); }
+  var logData = store(weekKey()) || [0,0,0,0,0,0,0], todayI = (new Date().getDay()+6)%7;
+  var weekEl = document.getElementById("week");
+  function renderLog(){
+    weekEl.innerHTML = ""; var max = Math.max(40, Math.max.apply(null, logData));
+    logData.forEach(function(m,i){
+      var d = document.createElement("div"); d.className = "day" + (i === todayI ? " today" : "");
+      d.innerHTML = '<div class="col"><i style="height:'+(m/max*100)+'%"></i></div><small>'+Math.round(m)+'</small><small>'+dayNames[i]+'</small>';
+      weekEl.appendChild(d);
+    });
+    var tot = Math.round(logData.reduce(function(a,b){ return a+b; }, 0));
+    document.getElementById("goalLine").innerHTML = "<b>"+tot+"</b> of 120 minutes this week" + (tot >= 120 ? " · goal reached!" : "");
+    store(weekKey(), logData);
+  }
+  var tStart = null, tInt = null, tEl = document.getElementById("timer"), tBtn = document.getElementById("timerBtn");
+  tBtn.addEventListener("click", function(){
+    if (tStart === null){ tStart = Date.now(); tBtn.textContent = "Stop & save"; tInt = setInterval(function(){ var s = Math.floor((Date.now()-tStart)/1000); tEl.textContent = String(Math.floor(s/60)).padStart(2,"0") + ":" + String(s%60).padStart(2,"0"); }, 250); }
+    else { clearInterval(tInt); logData[todayI] += (Date.now()-tStart)/60000; tStart = null; tBtn.textContent = "Start timer"; tEl.textContent = "00:00"; renderLog(); }
+  });
+  document.getElementById("add15").addEventListener("click", function(){ logData[todayI] += 15; renderLog(); });
+  document.getElementById("clearLog").addEventListener("click", function(){ logData = [0,0,0,0,0,0,0]; renderLog(); });
+  renderLog();
+
+  /* ---------- Supply checklist ---------- */
+  var items = [["Instrument, correct size","All"],["Method book","All"],["Rosin","All"],["Shoulder rest","Vln / Vla"],["Rock stop","Cello / Bass"],["Spare strings","All"],["Pencil in case","All"],["Folding music stand","Home"]];
+  var kitDone = store("hoKit") || [], kitEl = document.getElementById("kit");
+  function kitProg(){ document.getElementById("kitProg").textContent = kitDone.length + " / " + items.length; store("hoKit", kitDone); }
+  items.forEach(function(it, i){
+    var li = document.createElement("li");
+    li.innerHTML = '<label for="kit'+i+'"><input type="checkbox" id="kit'+i+'"'+(kitDone.indexOf(i) > -1 ? " checked" : "")+'><span>'+it[0]+'</span><em>'+it[1]+'</em></label>';
+    li.querySelector("input").addEventListener("change", function(e){ kitDone = kitDone.filter(function(x){ return x !== i; }); if (e.target.checked) kitDone.push(i); kitProg(); });
+    kitEl.appendChild(li);
+  });
+  kitProg();
+
+  /* ---------- Vocabulary ---------- */
+  var words = [["Arco","Bowing","Play with the bow. Usually follows a pizzicato passage."],["Pizzicato","Plucking","Pluck the string with a finger. Written as pizz."],["Divisi","Section","Split the section so players take different notes."],["Tutti","Everyone","All players join in together."],["Crescendo","Dynamics","Gradually get louder. Shown as an opening wedge."],["Spiccato","Bowing","Short, bouncing strokes made off the string."],["Col legno","Bowing","Tap the string with the wood of the bow."],["Fermata","Rhythm","Hold the note longer than its value, until the director releases."]];
+  var vEl = document.getElementById("vocab");
+  words.forEach(function(w){
+    var b = document.createElement("button"); b.type = "button"; b.className = "flip"; b.setAttribute("aria-pressed","false");
+    b.innerHTML = '<div class="in"><div class="f"><small>'+w[1]+'</small><b>'+w[0]+'</b><small>Tap to flip</small></div><div class="b"><small>'+w[0]+'</small><p>'+w[2]+'</p></div></div>';
+    b.addEventListener("click", function(){ b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"); });
+    vEl.appendChild(b);
+  });
+
+  /* ---------- Listening list ---------- */
+  var pieces = [["Serenade for Strings, Op. 22","Antonín Dvořák","Strings"],["Symphony No. 9 “From the New World”","Antonín Dvořák","Full orchestra"],["Eine kleine Nachtmusik","Wolfgang Amadeus Mozart","Strings"],["Brandenburg Concerto No. 3","Johann Sebastian Bach","Strings"],["St. Paul's Suite","Gustav Holst","Strings"],["Simple Symphony","Benjamin Britten","Strings"]];
+  var pl = document.getElementById("playlist");
+  pieces.forEach(function(p, i){
+    var li = document.createElement("li");
+    li.innerHTML = '<a href="https://www.youtube.com/results?search_query='+encodeURIComponent(p[0]+" "+p[1])+'" target="_blank" rel="noopener"><span class="n">'+(i+1)+'</span><div><b>'+p[0]+'</b><span>'+p[1]+'</span></div><em>'+p[2]+' ↗</em></a>';
+    pl.appendChild(li);
+  });
+  /* ---------- Contact form ---------- */
+  document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, $ = function(id){ return document.getElementById(id).value.trim(); };
+    var nm = $("name"), ok = nm && /\S+@\S+\.\S+/.test($("email")) && $("msg");
+    var s = document.getElementById("sent"); s.hidden = false;
+    if (!ok){ s.style.color = "var(--varnish)"; s.textContent = "Add your name, a valid email and a message."; return; }
+    s.style.color = ""; s.textContent = "Thanks, " + nm.split(" ")[0] + ". Hook this form up to the school email to start receiving messages.";
+    f.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
